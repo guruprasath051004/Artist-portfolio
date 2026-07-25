@@ -83,14 +83,14 @@ function Hero() {
       />
 
       <Container>
-        <div className="grid lg:grid-cols-2 gap-16 items-center py-16 md:py-24">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center py-16 md:py-24">
           {/* LEFT CONTENT */}
 
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="show"
-            className="relative z-10"
+            className="relative z-10 text-center lg:text-left"
           >
 
             {/* Badge */}
@@ -210,6 +210,7 @@ function Hero() {
                   transition={{
                     duration: 0.25,
                   }}
+                  className="text-center"
                 >
                   <h3 className="text-4xl font-bold text-[#B8860B]">
                     {number}
@@ -243,7 +244,7 @@ function Hero() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute w-[90%] h-[90%] rounded-[40px] bg-[#D4AF37]/15 blur-2xl"
+              className="absolute w-[75%] h-[75%] md:w-[90%] md:h-[90%] rounded-[40px] bg-[#D4AF37]/15 blur-2xl"
             />
 
             {/* Gold Frame */}
@@ -258,6 +259,8 @@ function Hero() {
                 ease: "easeInOut",
               }}
               className="
+                hidden
+                md:block
                 absolute
                 -top-6
                 -left-6
@@ -296,13 +299,13 @@ function Hero() {
                 alt="Saravana Kumar Artwork"
                 className="
                   w-full
-                  max-w-xs
-                  sm:max-w-xs
+                  max-w-[280px]
+                  sm:max-w-sm
                   md:max-w-md
                   lg:max-w-lg
                   aspect-[4/5]
                   object-cover
-                  border-[10px]
+                  border-[6px] sm:border-[8px] md:border-[10px]
                   border-white
                   rounded-3xl
                 "
@@ -356,8 +359,10 @@ function Hero() {
               }}
               className="
                 absolute
-                -bottom-6
-                -left-8
+                -bottom-4
+                -left-4
+                sm:-bottom-6
+                sm:-left-8
                 bg-white
                 rounded-2xl
                 shadow-2xl
