@@ -83,8 +83,7 @@ function Hero() {
       />
 
       <Container>
-        <div className="grid lg:grid-cols-2 gap-16 items-center py-24">
-
+        <div className="grid lg:grid-cols-2 gap-16 items-center py-16 md:py-24">
           {/* LEFT CONTENT */}
 
           <motion.div
@@ -109,7 +108,7 @@ function Hero() {
 
             <motion.h1
               variants={fadeUp}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-[#1F2937]"
+              className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-[#1F2937]"
               style={{ fontFamily: "Playfair Display" }}
             >
               Crafting
@@ -128,7 +127,7 @@ function Hero() {
 
             <motion.h2
               variants={fadeUp}
-              className="mt-5 text-2xl md:text-3xl text-gray-700"
+              className="mt-4 text-xl sm:text-2xl md:text-3xl text-gray-700"
               style={{ fontFamily: "Playfair Display" }}
             >
               Inspired by India's Heritage
@@ -138,7 +137,7 @@ function Hero() {
 
             <motion.p
               variants={fadeUp}
-              className="mt-8 max-w-xl text-lg leading-9 text-gray-600"
+              className="mt-6 max-w-xl text-base sm:text-lg leading-8 text-gray-600"
             >
               Every artwork is handcrafted with passion,
               blending centuries-old Indian traditions with
@@ -153,9 +152,12 @@ function Hero() {
 
             <motion.div
               variants={fadeUp}
-              className="mt-10 flex flex-wrap gap-5"
+              className="mt-8 flex flex-col sm:flex-row gap-4"
             >
-              <Button href="#gallery">
+              <Button
+               href="#gallery"
+               className="w-full sm:w-auto justify-center"
+              >
                 Explore Collection
               </Button>
 
@@ -168,6 +170,8 @@ function Hero() {
                     scale: 0.96,
                   }}
                   className="
+                    w-full
+                    sm:w-auto
                     px-8
                     py-4
                     rounded-full
@@ -191,7 +195,7 @@ function Hero() {
 
             <motion.div
               variants={fadeUp}
-              className="mt-16 grid grid-cols-3 gap-8 max-w-lg"
+              className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-lg"
             >
               {[
                 ["50+", "Artworks"],
@@ -292,7 +296,10 @@ function Hero() {
                 alt="Saravana Kumar Artwork"
                 className="
                   w-full
-                  max-w-lg
+                  max-w-xs
+                  sm:max-w-xs
+                  md:max-w-md
+                  lg:max-w-lg
                   aspect-[4/5]
                   object-cover
                   border-[10px]
@@ -383,7 +390,7 @@ function Hero() {
           duration: 2,
           repeat: Infinity,
         }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+       className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <a
           href="#about"
