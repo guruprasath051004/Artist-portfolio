@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   HiAcademicCap,
   HiSparkles,
@@ -6,7 +7,6 @@ import {
 } from "react-icons/hi2";
 
 import Container from "../common/Container";
-import Button from "../common/Button";
 import SectionTitle from "../common/SectionTitle";
 import artistImage from "../../assets/images/About/Artist photo.JPEG";
 
@@ -210,9 +210,28 @@ function About() {
             {/* Button */}
 
             <div className="mt-10">
-              <Button>
+              <a href="#gallery">
+               <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="
+                rounded-full
+              bg-[#D4A017]
+                px-10
+                py-4
+                text-lg
+                font-semibold
+              text-white
+                shadow-lg
+                transition-all
+                duration-300
+              hover:bg-[#B8860B]
+              "
+               >
                 Explore Gallery
-              </Button>
+               </motion.button>
+              </a>
+             
             </div>
           </div>
         </div>
