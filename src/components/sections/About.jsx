@@ -8,7 +8,7 @@ import {
 
 import Container from "../common/Container";
 import SectionTitle from "../common/SectionTitle";
-import artistImage from "../../assets/images/About/Artist photo.JPEG";
+import artistImage from "../../assets/images/About/Artist photo.jpeg";
 
 const skills = [
   "Tanjore Painting",

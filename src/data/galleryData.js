@@ -1,7 +1,7 @@
-import art1 from "../assets/images/gallery/art1.JPEG";
-import art2 from "../assets/images/gallery/art2.JPEG";
-import art3 from "../assets/images/gallery/art3.JPEG";
-import art4 from "../assets/images/gallery/art4.JPEG";
+import art1 from "../assets/images/gallery/art1.jpeg";
+import art2 from "../assets/images/gallery/art2.jpeg";
+import art3 from "../assets/images/gallery/art3.jpeg";
+import art4 from "../assets/images/gallery/art4.jpeg";
 
 const galleryData = [
   {

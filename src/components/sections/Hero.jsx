@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Container from "../common/Container";
 import Button from "../common/Button";
-import heroImage from "../../assets/images/Hero image.JPEG";
+import heroImage from "../../assets/images/Hero image.jpeg";
 
 const containerVariants = {
   hidden: {},
