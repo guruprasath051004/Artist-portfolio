@@ -83,14 +83,14 @@ function Hero() {
       />
 
       <Container>
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center py-16 md:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 md:py-24">
           {/* LEFT CONTENT */}
 
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="show"
-            className="relative z-10 text-center lg:text-left"
+            className="relative z-10 w-full flex flex-col items-center lg:items-start text-center lg:text-left"
           >
 
             {/* Badge */}
@@ -137,7 +137,7 @@ function Hero() {
 
             <motion.p
               variants={fadeUp}
-              className="mt-6 max-w-xl text-base sm:text-lg leading-8 text-gray-600"
+              className="mt-6 max-w-xl mx-auto lg:mx-0 text-base sm:text-lg leading-8 text-gray-600"
             >
               Every artwork is handcrafted with passion,
               blending centuries-old Indian traditions with
@@ -152,7 +152,7 @@ function Hero() {
 
             <motion.div
               variants={fadeUp}
-              className="mt-8 flex flex-col sm:flex-row gap-4"
+              className="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
             >
               <Button
                href="#gallery"
@@ -195,7 +195,7 @@ function Hero() {
 
             <motion.div
               variants={fadeUp}
-              className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-lg"
+             className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-lg w-full mx-auto"
             >
               {[
                 ["50+", "Artworks"],
@@ -230,7 +230,7 @@ function Hero() {
             variants={slideRight}
             initial="hidden"
             animate="show"
-            className="relative flex justify-center items-center"
+            className="relative flex justify-center items-center mt-10 lg:mt-0"
           >
             {/* Decorative Glow */}
 

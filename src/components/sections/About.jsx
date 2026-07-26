@@ -210,7 +210,7 @@ function About() {
             {/* Button */}
 
             <div className="mt-10">
-              <a href="#gallery">
+             <a href="#gallery" className="w-full sm:w-auto">
                <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
