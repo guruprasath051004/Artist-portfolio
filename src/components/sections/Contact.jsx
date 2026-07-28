@@ -82,6 +82,7 @@ function Contact() {
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="text-center lg:text-left"
           >
             <h3
               className="text-4xl font-bold text-[#1F2937]"
@@ -90,17 +91,17 @@ function Contact() {
               Commission an Artwork
             </h3>
 
-            <p className="mt-6 text-gray-600 leading-8">
+            <p className="mt-6 text-gray-600 leading-8 max-w-md mx-auto lg:mx-0">
               Whether you're looking for a traditional
               Tanjore painting, a custom portrait, or an
               original artwork for your home or office,
               feel free to get in touch.
             </p>
 
-            <div className="mt-10 space-y-6">
+            <div className="mt-10 space-y-6 max-w-md mx-auto lg:mx-0">
 
-              <div className="flex items-center gap-5">
-                <div className="w-14 h-14 rounded-2xl bg-[#B8860B]/10 flex items-center justify-center">
+              <div className="flex items-center gap-5 text-left">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#B8860B]/10 flex items-center justify-center">
                   <HiOutlineLocationMarker
                     className="text-[#B8860B]"
                     size={28}
@@ -117,8 +118,8 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-5">
-                <div className="w-14 h-14 rounded-2xl bg-[#B8860B]/10 flex items-center justify-center">
+              <div className="flex items-center gap-5 text-left">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#B8860B]/10 flex items-center justify-center">
                   <HiOutlineMail
                     className="text-[#B8860B]"
                     size={28}
@@ -139,8 +140,8 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-5">
-                <div className="w-14 h-14 rounded-2xl bg-[#B8860B]/10 flex items-center justify-center">
+              <div className="flex items-center gap-5 text-left">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#B8860B]/10 flex items-center justify-center">
                   <FaInstagram
                     className="text-[#B8860B]"
                     size={26}

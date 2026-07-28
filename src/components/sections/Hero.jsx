@@ -45,7 +45,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-[#F8F6F2] via-[#F5F2EA] to-[#EFE8DC]"
+      className="relative overflow-hidden min-h-[calc(100vh-6rem)] flex items-center bg-gradient-to-br from-[#F8F6F2] via-[#F5F2EA] to-[#EFE8DC]"
     >
       {/* Background Decorations */}
 
@@ -83,14 +83,14 @@ function Hero() {
       />
 
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 md:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-10 md:py-16">
           {/* LEFT CONTENT */}
 
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="show"
-            className="relative z-10 w-full flex flex-col items-center lg:items-start text-center lg:text-left"
+           className="order-1 lg:order-1 relative z-10 w-full flex flex-col items-center lg:items-start text-center lg:text-left"
           >
 
             {/* Badge */}
@@ -108,7 +108,7 @@ function Hero() {
 
             <motion.h1
               variants={fadeUp}
-              className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-[#1F2937]"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl"
               style={{ fontFamily: "Playfair Display" }}
             >
               Crafting
@@ -191,38 +191,6 @@ function Hero() {
               </a>
             </motion.div>
 
-            {/* Stats */}
-
-            <motion.div
-              variants={fadeUp}
-             className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-lg w-full mx-auto"
-            >
-              {[
-                ["50+", "Artworks"],
-                ["20+", "Happy Clients"],
-                ["5+", "Years Experience"],
-              ].map(([number, label]) => (
-                <motion.div
-                  key={label}
-                  whileHover={{
-                    y: -8,
-                  }}
-                  transition={{
-                    duration: 0.25,
-                  }}
-                  className="text-center"
-                >
-                  <h3 className="text-4xl font-bold text-[#B8860B]">
-                    {number}
-                  </h3>
-
-                  <p className="mt-2 text-gray-600">
-                    {label}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
-
           </motion.div>
                     {/* ================= RIGHT IMAGE ================= */}
 
@@ -230,7 +198,7 @@ function Hero() {
             variants={slideRight}
             initial="hidden"
             animate="show"
-            className="relative flex justify-center items-center mt-10 lg:mt-0"
+            className="order-2 lg:order-2 relative flex justify-center items-center mt-10 lg:mt-0"
           >
             {/* Decorative Glow */}
 
@@ -244,145 +212,187 @@ function Hero() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute w-[75%] h-[75%] md:w-[90%] md:h-[90%] rounded-[40px] bg-[#D4AF37]/15 blur-2xl"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] h-[75%] md:w-[90%] md:h-[90%] rounded-[40px] bg-[#D4AF37]/15 blur-2xl"
             />
 
-            {/* Gold Frame */}
+            {/* Image Group - sized to the artwork itself so the frame and badge anchor correctly */}
 
-            <motion.div
-              animate={{
-                rotate: [0, 1, 0, -1, 0],
-              }}
-              transition={{
-                duration: 12,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                hidden
-                md:block
-                absolute
-                -top-6
-                -left-6
-                w-full
-                h-full
-                border-2
-                border-[#D4AF37]
-                rounded-3xl
-              "
-            />
+            <div className="relative inline-block">
 
-            {/* Floating Artwork */}
+              {/* Gold Frame */}
 
-            <motion.div
-              animate={{
-                y: [0, -12, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              whileHover={{
-                scale: 1.03,
-                rotate: -1,
-              }}
-              className="
-                relative
-                rounded-3xl
-                overflow-hidden
-                shadow-[0_40px_90px_rgba(0,0,0,0.18)]
-              "
-            >
-              <img
-                src={heroImage}
-                alt="Saravana Kumar Artwork"
+              <motion.div
+                animate={{
+                  rotate: [0, 1, 0, -1, 0],
+                }}
+                transition={{
+                  duration: 12,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="
+                  hidden
+                  md:block
+                  absolute
+                  -top-6
+                  -left-6
                   w-full
-                  max-w-[280px]
-                  sm:max-w-sm
-                  md:max-w-md
-                  lg:max-w-lg
-                  aspect-[4/5]
-                  object-cover
-                  border-[6px] sm:border-[8px] md:border-[10px]
-                  border-white
+                  h-full
+                  border-2
+                  border-[#D4AF37]
                   rounded-3xl
                 "
               />
 
-              {/* Premium Overlay */}
+              {/* Floating Artwork */}
 
               <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.4 }}
+                animate={{
+                  y: [0, -12, 0],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                whileHover={{
+                  scale: 1.03,
+                  rotate: -1,
+                }}
                 className="
-                  absolute
-                  inset-0
-                  bg-gradient-to-t
-                  from-black/40
-                  via-transparent
-                  to-transparent
-                  flex
-                  items-end
-                  justify-center
-                  pb-8
+                  relative
+                  rounded-3xl
+                  overflow-hidden
+                  shadow-[0_40px_90px_rgba(0,0,0,0.18)]
                 "
               >
-                <span
-                  className="text-white text-lg tracking-widest uppercase"
-                  style={{ fontFamily: "Playfair Display" }}
+                <img
+                  src={heroImage}
+                  alt="Saravana Kumar Artwork"
+                  className="
+                    w-full
+                    max-w-[280px]
+                    sm:max-w-sm
+                    md:max-w-md
+                    lg:max-w-lg
+                    aspect-[4/5]
+                    object-cover
+                    border-[6px] sm:border-[8px] md:border-[10px]
+                    border-white
+                    rounded-3xl
+                  "
+                />
+
+                {/* Premium Overlay */}
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.4 }}
+                  className="
+                    absolute
+                    inset-0
+                    bg-gradient-to-t
+                    from-black/40
+                    via-transparent
+                    to-transparent
+                    flex
+                    items-end
+                    justify-center
+                    pb-8
+                  "
                 >
-                  Original Artwork
-                </span>
+                  <span
+                    className="text-white text-lg tracking-widest uppercase"
+                    style={{ fontFamily: "Playfair Display" }}
+                  >
+                    Original Artwork
+                  </span>
+                </motion.div>
               </motion.div>
-            </motion.div>
 
-            {/* Experience Badge */}
+              {/* Experience Badge */}
 
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 0.8,
-              }}
-              animate={{
-                opacity: 1,
-                scale: 1,
-              }}
-              transition={{
-                delay: 1,
-                duration: 0.6,
-              }}
-              whileHover={{
-                scale: 1.08,
-              }}
-              className="
-                absolute
-                -bottom-4
-                -left-4
-                sm:-bottom-6
-                sm:-left-8
-                bg-white
-                rounded-2xl
-                shadow-2xl
-                px-6
-                py-4
-                border
-                border-[#D4AF37]/20
-              "
-            >
-              <h3 className="text-3xl font-bold text-[#B8860B]">
-                100%
-              </h3>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  scale: 0.8,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+                transition={{
+                  delay: 1,
+                  duration: 0.6,
+                }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                className="
+                  absolute
+                  -bottom-4
+                  -left-4
+                  sm:-bottom-6
+                  sm:-left-8
+                  bg-white
+                  rounded-2xl
+                  shadow-2xl
+                  px-6
+                  py-4
+                  border
+                  border-[#D4AF37]/20
+                "
+              >
+                <h3 className="text-3xl font-bold text-[#B8860B]">
+                  100%
+                </h3>
 
-              <p className="text-gray-600 text-sm">
-                Handcrafted
-              </p>
-            </motion.div>
+                <p className="text-gray-600 text-sm">
+                  Handcrafted
+                </p>
+              </motion.div>
+
+            </div>
           </motion.div>
 
+
         </div>
+
+        {/* Stats */}
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-lg w-full mx-auto"
+        >
+          {[
+            ["50+", "Artworks"],
+            ["20+", "Happy Clients"],
+            ["5+", "Years Experience"],
+          ].map(([number, label]) => (
+            <motion.div
+              key={label}
+              whileHover={{
+                y: -8,
+              }}
+              transition={{
+                duration: 0.25,
+              }}
+              className="text-center"
+            >
+              <h3 className="text-4xl font-bold text-[#B8860B]">
+                {number}
+              </h3>
+
+              <p className="mt-2 text-gray-600">
+                {label}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+
       </Container>
 
       {/* Scroll Indicator */}

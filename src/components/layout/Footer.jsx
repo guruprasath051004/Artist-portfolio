@@ -12,7 +12,7 @@ function Footer() {
 
       {/* Top */}
 
-      <div className="max-w-7xl mx-auto px-6 py-20 grid gap-12 lg:grid-cols-3">
+      <div className="max-w-7xl mx-auto px-6 py-20 grid gap-12 text-center lg:text-left lg:grid-cols-3">
 
         {/* Brand */}
 
@@ -24,7 +24,7 @@ function Footer() {
             Saravana Kumar
           </h2>
 
-          <p className="mt-6 text-gray-300 leading-8">
+          <p className="mt-6 text-gray-300 leading-8 max-w-sm mx-auto lg:mx-0">
             Preserving India's artistic heritage through
             handcrafted Tanjore paintings, portraits,
             and timeless works of art.
@@ -80,7 +80,7 @@ function Footer() {
             Get in Touch
           </h3>
 
-          <div className="space-y-5">
+          <div className="space-y-5 flex flex-col items-center lg:items-start">
 
             <div className="flex gap-3 items-center">
               <HiOutlineLocationMarker size={22} />

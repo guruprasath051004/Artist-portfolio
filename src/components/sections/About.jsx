@@ -87,7 +87,7 @@ function About() {
 
           {/* RIGHT */}
 
-          <div>
+          <div className="text-center lg:text-left">
             <p className="uppercase tracking-[0.4em] text-sm text-[#B8860B] font-semibold">
               Traditional Indian Artist
             </p>
@@ -111,6 +111,10 @@ function About() {
                 text-xl
                 text-gray-700
                 leading-9
+                text-left
+                max-w-xl
+                mx-auto
+                lg:mx-0
               "
               style={{ fontFamily: "Playfair Display" }}
             >
@@ -154,6 +158,12 @@ function About() {
                       border
                       border-transparent
                       hover:border-[#D4AF37]
+                      flex
+                      flex-col
+                      items-center
+                      lg:items-start
+                      text-center
+                      lg:text-left
                     "
                   >
                     <Icon
@@ -161,11 +171,11 @@ function About() {
                       size={26}
                     />
 
-                    <p className="mt-4 text-sm text-gray-500">
+                    <p className="mt-4 text-sm text-gray-500 text-center lg:text-left w-full">
                       {item.title}
                     </p>
 
-                    <h4 className="font-semibold mt-1">
+                    <h4 className="font-semibold mt-1 text-center lg:text-left w-full">
                       {item.value}
                     </h4>
                   </div>
@@ -175,7 +185,7 @@ function About() {
 
             {/* Skills */}
 
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-3">
               {skills.map((skill) => (
                 <span
                   key={skill}
