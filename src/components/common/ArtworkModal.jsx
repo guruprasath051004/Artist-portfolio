@@ -116,8 +116,51 @@ function ArtworkModal({
           duration: 0.25,
         }}
         onClick={onClose}
-        className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 lg:p-8"
+        className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md overflow-y-auto"
       >
+
+        {/* Close - pinned to the screen, not the card, so it's always reachable */}
+
+        <button
+          onClick={onClose}
+          className="fixed right-4 top-4 sm:right-6 sm:top-6 z-[110] w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/90 backdrop-blur-md shadow-xl flex items-center justify-center hover:bg-[#B8860B] hover:text-white transition-all duration-300"
+        >
+          <HiX size={22} />
+        </button>
+
+        {/* Counter */}
+
+        <div className="fixed left-4 top-4 sm:left-6 sm:top-6 z-[110] bg-black/60 backdrop-blur-lg text-white px-4 py-2 sm:px-5 rounded-full text-sm tracking-widest">
+          {currentIndex + 1} / {artworks.length}
+        </div>
+
+        {/* Previous */}
+
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onSelect(prevArtwork);
+          }}
+          className="fixed left-2 sm:left-6 top-1/2 -translate-y-1/2 z-[110] w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/90 backdrop-blur-md shadow-xl flex items-center justify-center hover:bg-[#B8860B] hover:text-white transition-all duration-300"
+        >
+          <HiChevronLeft size={24} />
+        </button>
+
+        {/* Next */}
+
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onSelect(nextArtwork);
+          }}
+          className="fixed right-2 sm:right-6 top-1/2 -translate-y-1/2 z-[110] w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/90 backdrop-blur-md shadow-xl flex items-center justify-center hover:bg-[#B8860B] hover:text-white transition-all duration-300"
+        >
+          <HiChevronRight size={24} />
+        </button>
+
+        {/* Centering wrapper - keeps the card centered when short, scrolls with the backdrop when tall */}
+
+        <div className="min-h-full w-full flex items-center justify-center p-4 py-20 lg:p-8">
 
         <motion.div
           initial={{
@@ -141,42 +184,9 @@ function ArtworkModal({
           className="relative overflow-hidden rounded-[32px] bg-white w-full max-w-7xl grid lg:grid-cols-[1.2fr_0.8fr]"
         >
 
-          {/* Close */}
-
-          <button
-            onClick={onClose}
-            className="absolute right-6 top-6 z-30 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md shadow-xl flex items-center justify-center hover:bg-[#B8860B] hover:text-white transition-all duration-300"
-          >
-            <HiX size={24} />
-          </button>
-
-          {/* Counter */}
-
-          <div className="absolute left-6 top-6 z-30 bg-black/60 backdrop-blur-lg text-white px-5 py-2 rounded-full text-sm tracking-widest">
-            {currentIndex + 1} / {artworks.length}
-          </div>
-
-          {/* Previous */}
-
-          <button
-            onClick={() => onSelect(prevArtwork)}
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md shadow-xl flex items-center justify-center hover:bg-[#B8860B] hover:text-white transition-all duration-300"
-          >
-            <HiChevronLeft size={26} />
-          </button>
-
-          {/* Next */}
-
-          <button
-            onClick={() => onSelect(nextArtwork)}
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md shadow-xl flex items-center justify-center hover:bg-[#B8860B] hover:text-white transition-all duration-300"
-          >
-            <HiChevronRight size={26} />
-          </button>
-
           {/* LEFT IMAGE */}
 
-          <div className="relative bg-[#F8F6F2] flex items-center justify-center p-10 overflow-hidden">
+          <div className="relative bg-[#F8F6F2] flex items-center justify-center p-6 sm:p-10 overflow-hidden">
 
             <div className="absolute w-[600px] h-[600px] rounded-full bg-[#D4AF37]/10 blur-3xl" />
 
@@ -198,7 +208,7 @@ function ArtworkModal({
               }}
               src={artwork.image}
               alt={artwork.title}
-              className="relative max-h-[80vh] object-contain rounded-2xl border-8 border-white shadow-[0_40px_80px_rgba(0,0,0,0.25)]"
+              className="relative max-h-[40vh] sm:max-h-[55vh] lg:max-h-[80vh] object-contain rounded-2xl border-8 border-white shadow-[0_40px_80px_rgba(0,0,0,0.25)]"
             />
           </div>
                     {/* RIGHT DETAILS */}
@@ -329,6 +339,8 @@ function ArtworkModal({
           </div>
 
         </motion.div>
+
+        </div>
 
       </motion.div>
 

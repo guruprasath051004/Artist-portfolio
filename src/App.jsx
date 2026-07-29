@@ -35,7 +35,7 @@ function App() {
 
       {/* Main Website */}
       <div
-        className={`min-h-screen bg-[#F8F6F2] text-[#1F2937] transition-opacity duration-700 ${
+        className={`min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#F8F6F2] text-[#1F2937] transition-opacity duration-700 ${
           loading
             ? "opacity-0 pointer-events-none"
             : "opacity-100"
