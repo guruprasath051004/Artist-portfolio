@@ -92,21 +92,21 @@ function Footer() {
             <div className="flex gap-3 items-center">
               <HiOutlineMail size={22} />
               <a
-                href="mailto:yourmail@gmail.com"
+                href="mailto:saravanans24869@gmail.com"
                 className="text-gray-300 hover:text-[#D4AF37]"
               >
-                yourmail@gmail.com
+                saravanans24869@gmail.com
               </a>
             </div>
 
             <a
-              href="https://instagram.com/msk_arts_7"
+              href="https://instagram.com/msk_arts_07"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-3 mt-3 text-gray-300 hover:text-[#D4AF37]"
             >
               <FaInstagram size={22} />
-              @msk_arts_7
+              @msk_arts_07
             </a>
 
           </div>

@@ -297,6 +297,14 @@ function ArtworkModal({
             <div className="mt-10 flex flex-wrap gap-4">
 
               <button
+                onClick={() => {
+                  onClose();
+                  setTimeout(() => {
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }, 350);
+                }}
                 className="
                   rounded-full
                   bg-gradient-to-r

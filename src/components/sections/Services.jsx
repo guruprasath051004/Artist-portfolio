@@ -39,7 +39,7 @@ function Services() {
   return (
     <section
       id="services"
-      className="relative py-32 bg-gradient-to-b from-white to-[#F8F6F2] overflow-hidden"
+      className="relative scroll-mt-24 py-32 bg-gradient-to-b from-white to-[#F8F6F2] overflow-hidden"
     >
       {/* Background Glow */}
 
@@ -120,6 +120,11 @@ function Services() {
                 </p>
 
                 <button
+                  onClick={() =>
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
                   className="
                     mt-8
                     font-semibold
@@ -170,6 +175,12 @@ function Services() {
 
           <a
             href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
             className="
               inline-block
               mt-10

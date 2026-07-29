@@ -48,7 +48,7 @@ function About() {
   return (
     <section
       id="about"
-      className="py-32 bg-gradient-to-b from-white to-[#F8F6F2]"
+      className="relative overflow-hidden scroll-mt-24 py-32 bg-gradient-to-b from-white to-[#F8F6F2]"
     >
       <Container>
         <SectionTitle
@@ -60,10 +60,10 @@ function About() {
           {/* LEFT */}
 
           <div className="flex justify-center">
-            <div className="relative">
+            <div className="relative p-5">
               {/* Decorative Border */}
 
-              <div className="absolute -top-5 -left-5 w-full h-full border-2 border-[#D4AF37] rounded-3xl"></div>
+              <div className="absolute inset-0 border-2 border-[#D4AF37] rounded-3xl"></div>
 
               {/* Image */}
 
@@ -73,6 +73,7 @@ function About() {
                 className="
                   relative
                   max-w-md
+                  w-full
                   rounded-3xl
                   border-[10px]
                   border-white

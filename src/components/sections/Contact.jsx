@@ -66,7 +66,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="py-32 bg-[#F8F6F2]"
+      className="scroll-mt-24 py-32 bg-[#F8F6F2]"
     >
       <Container>
         <SectionTitle
@@ -132,7 +132,7 @@ function Contact() {
                   </h4>
 
                   <a
-                    href="mailto:yourmail@gmail.com"
+                    href="mailto:saravanans24869@gmail.com"
                     className="text-[#B8860B] hover:underline"
                   >
                     saravanans24869@gmail.com
@@ -154,12 +154,12 @@ function Contact() {
                   </h4>
 
                   <a
-                    href="https://instagram.com/msk_arts_7"
+                    href="https://instagram.com/msk_arts_07"
                     target="_blank"
                     rel="noreferrer"
                     className="text-[#B8860B] hover:underline"
                   >
-                    @msk_arts_7
+                    @msk_arts_07
                   </a>
                 </div>
               </div>

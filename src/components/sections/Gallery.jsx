@@ -50,7 +50,7 @@ function Gallery() {
   return (
     <section
       id="gallery"
-      className="relative py-28 bg-gradient-to-b from-[#F8F6F2] via-[#FAF8F4] to-white overflow-hidden"
+      className="relative scroll-mt-24 py-28 bg-gradient-to-b from-[#F8F6F2] via-[#FAF8F4] to-white overflow-hidden"
     >
       {/* Decorative Background */}
 
