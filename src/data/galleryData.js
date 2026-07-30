@@ -33,13 +33,13 @@ const galleryData = [
   {
     id: 3,
     image: art3,
-    title: "The Captain's Spirit",
-    medium: "Acrylic on Canvas",
-    category: "Acrylic",
+    title: "Harvest Harmony",
+    medium: "Oil on Canvas",
+    category: "Oil",
     year: "2023",
     size: "24 × 36 inches",
     description:
-      "An abstract Cubist portrait inspired by the legendary cricketer M.S. Dhoni, portraying his calm determination, fearless leadership, and unwavering focus. Bold geometric forms and earthy tones symbolize the many facets of his personality, while the fragmented composition reflects the intensity, strategy, and resilience that define one of cricket's greatest captains. The artwork is a contemporary tribute to a sporting icon whose legacy continues to inspire millions.",
+      "The image is a painting depicting a traditional Indian ceremonial setup, likely for a puja or a ritual. The painting is realistic in style and features the following elements:Kalasha: A brass pot topped with a coconut and five mango leaves, a common symbol of abundance and wisdom in Hindu rituals.Vilakku: A traditional brass oil lamp, which is lit during ceremonies.Fabric: The items are arranged on a pink cloth with a floral pattern, which is draped over a surface. A brown, patterned cloth is also draped over the kalasha.Foliage: A bundle of green grass, possibly darbha grass, is placed in front of the main arrangement.Background: The background is a plain, light brown or beige color, which helps to focus attention on the central subject.",
   },
   {
     id: 4,
