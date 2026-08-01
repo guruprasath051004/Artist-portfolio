@@ -16,24 +16,75 @@ function Loader({ loading }) {
 
             <motion.div
               animate={{
-                rotate: 360,
-                scale: [1, 1.08, 1],
+                scale: [0.85, 1.08, 0.85],
+                y: [0, -6, 0],
+                filter: [
+                  "drop-shadow(0 0 4px rgba(212,175,55,0.3))",
+                  "drop-shadow(0 0 18px rgba(212,175,55,0.8))",
+                  "drop-shadow(0 0 4px rgba(212,175,55,0.3))",
+                ],
               }}
               transition={{
-                rotate: {
-                  repeat: Infinity,
-                  duration: 2,
-                  ease: "linear",
-                },
-                scale: {
-                  repeat: Infinity,
-                  duration: 1.5,
-                  ease: "easeInOut",
-                },
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
               }}
-              className="mb-6 text-6xl"
+              className="mb-6 flex justify-center"
             >
-              🎨
+              <svg
+                width="90"
+                height="90"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Center petal */}
+                <path
+                  d="M50 12C39 28 37 43 50 58C63 43 61 28 50 12Z"
+                  fill="#D4AF37"
+                />
+
+                {/* Inner petals */}
+                <path
+                  d="M30 27C29 43 35 55 50 63C48 46 41 34 30 27Z"
+                  fill="#C99700"
+                />
+
+                <path
+                  d="M70 27C71 43 65 55 50 63C52 46 59 34 70 27Z"
+                  fill="#C99700"
+                />
+
+                {/* Outer petals */}
+                <path
+                  d="M14 43C20 61 31 70 50 72C43 55 31 46 14 43Z"
+                  fill="#B8860B"
+                />
+
+                <path
+                  d="M86 43C80 61 69 70 50 72C57 55 69 46 86 43Z"
+                  fill="#B8860B"
+                />
+
+                {/* Bottom petals */}
+                <path
+                  d="M7 62C18 78 33 84 50 78C38 66 24 61 7 62Z"
+                  fill="#D4AF37"
+                />
+
+                <path
+                  d="M93 62C82 78 67 84 50 78C62 66 76 61 93 62Z"
+                  fill="#D4AF37"
+                />
+
+                {/* Base */}
+                <path
+                  d="M25 82C38 88 62 88 75 82"
+                  stroke="#B8860B"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
+              </svg>
             </motion.div>
 
             {/* Name */}
