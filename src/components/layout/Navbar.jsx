@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import Container from "../common/Container";
+import mskLogo from "../../assets/images/logo/msk-logo.png";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -84,24 +85,63 @@ function Navbar() {
       }`}
     >
       <Container>
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-28">
           {/* Logo */}
+          {/* Brand Logo */}
+          {/* Brand Logo */}
           <button
             onClick={() => handleNavClick("home")}
-            className="text-left group"
+            className="flex items-center gap-3 sm:gap-4 group shrink-0"
           >
-            <h1
-              className="text-3xl md:text-4xl font-bold text-[#1F2937] transition-colors duration-300 group-hover:text-[#B8860B]"
-              style={{ fontFamily: "Playfair Display" }}
-            >
-              Saravana Kumar
-            </h1>
+            {/* MSK Logo */}
+            <img
+              src={mskLogo}
+              alt="MSK Arts Logo"
+             className="
+              w-20 h-20
+              sm:w-24 sm:h-24
+              md:w-28 md:h-28
+              object-contain
+              shrink-0
+            "
+            />
 
-            <p className="mt-1 text-[11px] uppercase tracking-[0.45em] text-[#B8860B]">
-              Fine Artist
-            </p>
+            {/* Artist Name */}
+            <div className="text-left">
+              <h1
+                className="
+                  text-xl
+                  sm:text-2xl
+                  md:text-3xl
+                  lg:text-4xl
+                  font-bold
+                  leading-none
+                  text-[#B8860B]
+                  transition-colors
+                  duration-300
+                  group-hover:text-[#D4AF37]
+                "
+                style={{ fontFamily: "Playfair Display" }}
+              >
+                Saravana Kumar
+              </h1>
+
+              <p
+                className="
+                  mt-2
+                  text-[8px]
+                  sm:text-[10px]
+                  md:text-[11px]
+                  uppercase
+                  tracking-[0.30em]
+                  sm:tracking-[0.45em]
+                  text-[#B8860B]
+                "
+              >
+                Fine Artist
+              </p>
+            </div>
           </button>
-
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => {
